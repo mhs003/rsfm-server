@@ -1,0 +1,5 @@
+
+
+### ls
+GET http://localhost:1902/?cmd=ls&path=~
+Authorization: 24tgdrwtq3qhe4r
