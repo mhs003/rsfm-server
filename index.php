@@ -24,6 +24,13 @@ function authMiddleware()
     return true;
 }
 
+$cmd->register('ping', 'get', function() {
+    return [
+        'success': true,
+        'message': 'pong'
+    ];
+}, authMiddleware(...);
+
 $cmd->register('ls', 'get', function () use ($filemanager) {
     $path = request(getfield: 'path') ?? '~';
 
